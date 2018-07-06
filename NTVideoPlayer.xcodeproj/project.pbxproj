@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3298723FD54416B2FD387383 /* libPods-NTVideoPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C2EB4765A5EDD715FDB82 /* libPods-NTVideoPlayer.a */; };
+		B2A8BAC720EF3BAC008789F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */; };
+		B2A8BACF20EF3BAD008789F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BACE20EF3BAD008789F2 /* Assets.xcassets */; };
+		B2A8BAD220EF3BAD008789F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAD020EF3BAD008789F2 /* LaunchScreen.storyboard */; };
+		B2A8BAD520EF3BAD008789F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAD420EF3BAD008789F2 /* main.m */; };
+		B2A8BAE320EF58A6008789F2 /* NTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAE120EF58A6008789F2 /* NTHomeViewController.m */; };
+		B2A8BAE420EF58A6008789F2 /* NTHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAE220EF58A6008789F2 /* NTHomeViewController.xib */; };
+		B2A8BAE920EF5C0B008789F2 /* NTHomeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAE720EF5C0B008789F2 /* NTHomeListTableViewCell.m */; };
+		B2A8BAEA20EF5C0B008789F2 /* NTHomeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAE820EF5C0B008789F2 /* NTHomeListTableViewCell.xib */; };
+		B2A8BAF220EF5ED5008789F2 /* NTRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAF120EF5ED5008789F2 /* NTRequestManager.m */; };
+		B2A8BAF520EF5F6F008789F2 /* UIViewController+NTNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAF420EF5F6F008789F2 /* UIViewController+NTNavigation.m */; };
+		B2A8BAF820EF5FEA008789F2 /* UIFont+NTRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAF720EF5FEA008789F2 /* UIFont+NTRuntime.m */; };
+		B2A8BAFB20EF6026008789F2 /* UIFont+NTNormalFont.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAFA20EF6026008789F2 /* UIFont+NTNormalFont.m */; };
+		B2A8BAFE20EF60C4008789F2 /* NSString+NTSize.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAFD20EF60C4008789F2 /* NSString+NTSize.m */; };
+		B2A8BB0320EF687E008789F2 /* NTEmptyPlaceHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BB0220EF687E008789F2 /* NTEmptyPlaceHolderView.m */; };
+		B2A8BB0720EF6CBB008789F2 /* NTInputWarnView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BB0620EF6CBB008789F2 /* NTInputWarnView.m */; };
+		B2A8BB0920EF6CCD008789F2 /* NTWarnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BB0820EF6CCD008789F2 /* NTWarnView.xib */; };
+		B2A8BB0E20EF6CF3008789F2 /* NTWarnViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BB0D20EF6CF3008789F2 /* NTWarnViewManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B0C2EB4765A5EDD715FDB82 /* libPods-NTVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTVideoPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43D11D38E3D9D67155EBF1A /* Pods-NTVideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTVideoPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NTVideoPlayer/Pods-NTVideoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		B2A8BAC220EF3BAC008789F2 /* NTVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A8BAC520EF3BAC008789F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B2A8BACE20EF3BAD008789F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2A8BAD120EF3BAD008789F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2A8BAD320EF3BAD008789F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2A8BAD420EF3BAD008789F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2A8BAE020EF58A6008789F2 /* NTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTHomeViewController.h; sourceTree = "<group>"; };
+		B2A8BAE120EF58A6008789F2 /* NTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTHomeViewController.m; sourceTree = "<group>"; };
+		B2A8BAE220EF58A6008789F2 /* NTHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTHomeViewController.xib; sourceTree = "<group>"; };
+		B2A8BAE620EF5C0B008789F2 /* NTHomeListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTHomeListTableViewCell.h; sourceTree = "<group>"; };
+		B2A8BAE720EF5C0B008789F2 /* NTHomeListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTHomeListTableViewCell.m; sourceTree = "<group>"; };
+		B2A8BAE820EF5C0B008789F2 /* NTHomeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTHomeListTableViewCell.xib; sourceTree = "<group>"; };
+		B2A8BAF020EF5ED5008789F2 /* NTRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRequestManager.h; sourceTree = "<group>"; };
+		B2A8BAF120EF5ED5008789F2 /* NTRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRequestManager.m; sourceTree = "<group>"; };
+		B2A8BAF320EF5F6F008789F2 /* UIViewController+NTNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NTNavigation.h"; sourceTree = "<group>"; };
+		B2A8BAF420EF5F6F008789F2 /* UIViewController+NTNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NTNavigation.m"; sourceTree = "<group>"; };
+		B2A8BAF620EF5FEA008789F2 /* UIFont+NTRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+NTRuntime.h"; sourceTree = "<group>"; };
+		B2A8BAF720EF5FEA008789F2 /* UIFont+NTRuntime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+NTRuntime.m"; sourceTree = "<group>"; };
+		B2A8BAF920EF6026008789F2 /* UIFont+NTNormalFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+NTNormalFont.h"; sourceTree = "<group>"; };
+		B2A8BAFA20EF6026008789F2 /* UIFont+NTNormalFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+NTNormalFont.m"; sourceTree = "<group>"; };
+		B2A8BAFC20EF60C4008789F2 /* NSString+NTSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+NTSize.h"; sourceTree = "<group>"; };
+		B2A8BAFD20EF60C4008789F2 /* NSString+NTSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+NTSize.m"; sourceTree = "<group>"; };
+		B2A8BAFF20EF614E008789F2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B2A8BB0120EF687E008789F2 /* NTEmptyPlaceHolderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTEmptyPlaceHolderView.h; sourceTree = "<group>"; };
+		B2A8BB0220EF687E008789F2 /* NTEmptyPlaceHolderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTEmptyPlaceHolderView.m; sourceTree = "<group>"; };
+		B2A8BB0520EF6CBB008789F2 /* NTInputWarnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTInputWarnView.h; sourceTree = "<group>"; };
+		B2A8BB0620EF6CBB008789F2 /* NTInputWarnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTInputWarnView.m; sourceTree = "<group>"; };
+		B2A8BB0820EF6CCD008789F2 /* NTWarnView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTWarnView.xib; sourceTree = "<group>"; };
+		B2A8BB0C20EF6CF3008789F2 /* NTWarnViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTWarnViewManager.h; sourceTree = "<group>"; };
+		B2A8BB0D20EF6CF3008789F2 /* NTWarnViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTWarnViewManager.m; sourceTree = "<group>"; };
+		BDD83ACD431D28FF308156C0 /* Pods-NTVideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTVideoPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NTVideoPlayer/Pods-NTVideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2A8BABF20EF3BAC008789F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3298723FD54416B2FD387383 /* libPods-NTVideoPlayer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2A8BAB920EF3BAC008789F2 = {
+			isa = PBXGroup;
+			children = (
+				B2A8BAC420EF3BAC008789F2 /* NTVideoPlayer */,
+				B2A8BAC320EF3BAC008789F2 /* Products */,
+				DF536A0A7F8CE648F1F4EA1C /* Pods */,
+				D402ED4015CDFED33AA61BA0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B2A8BAC320EF3BAC008789F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8BAC220EF3BAC008789F2 /* NTVideoPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2A8BAC420EF3BAC008789F2 /* NTVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8BB0020EF684E008789F2 /* View */,
+				B2A8BAEF20EF5EA1008789F2 /* Request */,
+				B2A8BAED20EF5E7C008789F2 /* Category */,
+				B2A8BAEB20EF5E46008789F2 /* Main */,
+				B2A8BAE520EF5923008789F2 /* Video */,
+				B2A8BADB20EF5859008789F2 /* Home */,
+				B2A8BAC520EF3BAC008789F2 /* AppDelegate.h */,
+				B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */,
+				B2A8BAFF20EF614E008789F2 /* PrefixHeader.pch */,
+				B2A8BACE20EF3BAD008789F2 /* Assets.xcassets */,
+				B2A8BAD020EF3BAD008789F2 /* LaunchScreen.storyboard */,
+				B2A8BAD320EF3BAD008789F2 /* Info.plist */,
+				B2A8BAD420EF3BAD008789F2 /* main.m */,
+			);
+			path = NTVideoPlayer;
+			sourceTree = "<group>";
+		};
+		B2A8BADB20EF5859008789F2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8BADC20EF5871008789F2 /* View */,
+				B2A8BAE020EF58A6008789F2 /* NTHomeViewController.h */,
+				B2A8BAE120EF58A6008789F2 /* NTHomeViewController.m */,
+				B2A8BAE220EF58A6008789F2 /* NTHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B2A8BADC20EF5871008789F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8BAE620EF5C0B008789F2 /* NTHomeListTableViewCell.h */,
+				B2A8BAE720EF5C0B008789F2 /* NTHomeListTableViewCell.m */,
+				B2A8BAE820EF5C0B008789F2 /* NTHomeListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2A8BAE520EF5923008789F2 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		B2A8BAEB20EF5E46008789F2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B2A8BAED20EF5E7C008789F2 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8BAF320EF5F6F008789F2 /* UIViewController+NTNavigation.h */,
+				B2A8BAF420EF5F6F008789F2 /* UIViewController+NTNavigation.m */,
+				B2A8BAFC20EF60C4008789F2 /* NSString+NTSize.h */,
+				B2A8BAFD20EF60C4008789F2 /* NSString+NTSize.m */,
+				B2A8BAF620EF5FEA008789F2 /* UIFont+NTRuntime.h */,
+				B2A8BAF720EF5FEA008789F2 /* UIFont+NTRuntime.m */,
+				B2A8BAF920EF6026008789F2 /* UIFont+NTNormalFont.h */,
+				B2A8BAFA20EF6026008789F2 /* UIFont+NTNormalFont.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B2A8BAEF20EF5EA1008789F2 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8BAF020EF5ED5008789F2 /* NTRequestManager.h */,
+				B2A8BAF120EF5ED5008789F2 /* NTRequestManager.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B2A8BB0020EF684E008789F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8BB0420EF6C88008789F2 /* InputView */,
+				B2A8BB0120EF687E008789F2 /* NTEmptyPlaceHolderView.h */,
+				B2A8BB0220EF687E008789F2 /* NTEmptyPlaceHolderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2A8BB0420EF6C88008789F2 /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8BB0C20EF6CF3008789F2 /* NTWarnViewManager.h */,
+				B2A8BB0D20EF6CF3008789F2 /* NTWarnViewManager.m */,
+				B2A8BB0520EF6CBB008789F2 /* NTInputWarnView.h */,
+				B2A8BB0620EF6CBB008789F2 /* NTInputWarnView.m */,
+				B2A8BB0820EF6CCD008789F2 /* NTWarnView.xib */,
+			);
+			path = InputView;
+			sourceTree = "<group>";
+		};
+		D402ED4015CDFED33AA61BA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C2EB4765A5EDD715FDB82 /* libPods-NTVideoPlayer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF536A0A7F8CE648F1F4EA1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A43D11D38E3D9D67155EBF1A /* Pods-NTVideoPlayer.debug.xcconfig */,
+				BDD83ACD431D28FF308156C0 /* Pods-NTVideoPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2A8BAC120EF3BAC008789F2 /* NTVideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2A8BAD820EF3BAD008789F2 /* Build configuration list for PBXNativeTarget "NTVideoPlayer" */;
+			buildPhases = (
+				7B47363E648F5B6A5E90C687 /* [CP] Check Pods Manifest.lock */,
+				B2A8BABE20EF3BAC008789F2 /* Sources */,
+				B2A8BABF20EF3BAC008789F2 /* Frameworks */,
+				B2A8BAC020EF3BAC008789F2 /* Resources */,
+				692B9674829F2CACA328AE64 /* [CP] Embed Pods Frameworks */,
+				D91AD1879DDD0FF5B2CA1280 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NTVideoPlayer;
+			productName = NTVideoPlayer;
+			productReference = B2A8BAC220EF3BAC008789F2 /* NTVideoPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2A8BABA20EF3BAC008789F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = liying;
+				TargetAttributes = {
+					B2A8BAC120EF3BAC008789F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = B2A8BABD20EF3BAC008789F2 /* Build configuration list for PBXProject "NTVideoPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2A8BAB920EF3BAC008789F2;
+			productRefGroup = B2A8BAC320EF3BAC008789F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2A8BAC120EF3BAC008789F2 /* NTVideoPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2A8BAC020EF3BAC008789F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A8BAD220EF3BAD008789F2 /* LaunchScreen.storyboard in Resources */,
+				B2A8BAE420EF58A6008789F2 /* NTHomeViewController.xib in Resources */,
+				B2A8BAEA20EF5C0B008789F2 /* NTHomeListTableViewCell.xib in Resources */,
+				B2A8BB0920EF6CCD008789F2 /* NTWarnView.xib in Resources */,
+				B2A8BACF20EF3BAD008789F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		692B9674829F2CACA328AE64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NTVideoPlayer/Pods-NTVideoPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B47363E648F5B6A5E90C687 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NTVideoPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D91AD1879DDD0FF5B2CA1280 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NTVideoPlayer/Pods-NTVideoPlayer-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NTVideoPlayer/Pods-NTVideoPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2A8BABE20EF3BAC008789F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A8BB0320EF687E008789F2 /* NTEmptyPlaceHolderView.m in Sources */,
+				B2A8BAD520EF3BAD008789F2 /* main.m in Sources */,
+				B2A8BAE320EF58A6008789F2 /* NTHomeViewController.m in Sources */,
+				B2A8BAFB20EF6026008789F2 /* UIFont+NTNormalFont.m in Sources */,
+				B2A8BAF520EF5F6F008789F2 /* UIViewController+NTNavigation.m in Sources */,
+				B2A8BAE920EF5C0B008789F2 /* NTHomeListTableViewCell.m in Sources */,
+				B2A8BB0E20EF6CF3008789F2 /* NTWarnViewManager.m in Sources */,
+				B2A8BAFE20EF60C4008789F2 /* NSString+NTSize.m in Sources */,
+				B2A8BAF820EF5FEA008789F2 /* UIFont+NTRuntime.m in Sources */,
+				B2A8BAF220EF5ED5008789F2 /* NTRequestManager.m in Sources */,
+				B2A8BB0720EF6CBB008789F2 /* NTInputWarnView.m in Sources */,
+				B2A8BAC720EF3BAC008789F2 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2A8BAD020EF3BAD008789F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2A8BAD120EF3BAD008789F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2A8BAD620EF3BAD008789F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2A8BAD720EF3BAD008789F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2A8BAD920EF3BAD008789F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A43D11D38E3D9D67155EBF1A /* Pods-NTVideoPlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TA8KW3PC9E;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NTVideoPlayer/PrefixHeader.pch";
+				INFOPLIST_FILE = NTVideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyde.NTVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2A8BADA20EF3BAD008789F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD83ACD431D28FF308156C0 /* Pods-NTVideoPlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TA8KW3PC9E;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NTVideoPlayer/PrefixHeader.pch";
+				INFOPLIST_FILE = NTVideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyde.NTVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2A8BABD20EF3BAC008789F2 /* Build configuration list for PBXProject "NTVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2A8BAD620EF3BAD008789F2 /* Debug */,
+				B2A8BAD720EF3BAD008789F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2A8BAD820EF3BAD008789F2 /* Build configuration list for PBXNativeTarget "NTVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2A8BAD920EF3BAD008789F2 /* Debug */,
+				B2A8BADA20EF3BAD008789F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2A8BABA20EF3BAC008789F2 /* Project object */;
+}
