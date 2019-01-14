@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3298723FD54416B2FD387383 /* libPods-NTVideoPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C2EB4765A5EDD715FDB82 /* libPods-NTVideoPlayer.a */; };
+		B207EEC621EC7B5D00D02DC3 /* NTLocalVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B207EEC421EC7B5C00D02DC3 /* NTLocalVideoViewController.m */; };
+		B207EEC721EC7B5D00D02DC3 /* NTLocalVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B207EEC521EC7B5C00D02DC3 /* NTLocalVideoViewController.xib */; };
+		B207EECB21EC7C7A00D02DC3 /* NTDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B207EEC921EC7C7A00D02DC3 /* NTDownloadViewController.m */; };
+		B207EECC21EC7C7A00D02DC3 /* NTDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B207EECA21EC7C7A00D02DC3 /* NTDownloadViewController.xib */; };
+		B2383B1721EC7D89005794C2 /* NTLocalVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2383B1521EC7D89005794C2 /* NTLocalVideoTableViewCell.m */; };
+		B2383B1821EC7D89005794C2 /* NTLocalVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2383B1621EC7D89005794C2 /* NTLocalVideoTableViewCell.xib */; };
+		B2383B1C21EC7DA3005794C2 /* NTDownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2383B1A21EC7DA3005794C2 /* NTDownloadTableViewCell.m */; };
+		B2383B1D21EC7DA3005794C2 /* NTDownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2383B1B21EC7DA3005794C2 /* NTDownloadTableViewCell.xib */; };
+		B2383B2121EC821F005794C2 /* NTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2383B2021EC821F005794C2 /* NTWebViewController.m */; };
+		B2383B2421EC87F4005794C2 /* NTVideoParseManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B2383B2321EC87F4005794C2 /* NTVideoParseManage.m */; };
 		B2A8BAC720EF3BAC008789F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */; };
 		B2A8BACF20EF3BAD008789F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BACE20EF3BAD008789F2 /* Assets.xcassets */; };
 		B2A8BAD220EF3BAD008789F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAD020EF3BAD008789F2 /* LaunchScreen.storyboard */; };
@@ -30,6 +40,22 @@
 /* Begin PBXFileReference section */
 		4B0C2EB4765A5EDD715FDB82 /* libPods-NTVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTVideoPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43D11D38E3D9D67155EBF1A /* Pods-NTVideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTVideoPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NTVideoPlayer/Pods-NTVideoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		B207EEC321EC7B5C00D02DC3 /* NTLocalVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTLocalVideoViewController.h; sourceTree = "<group>"; };
+		B207EEC421EC7B5C00D02DC3 /* NTLocalVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTLocalVideoViewController.m; sourceTree = "<group>"; };
+		B207EEC521EC7B5C00D02DC3 /* NTLocalVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTLocalVideoViewController.xib; sourceTree = "<group>"; };
+		B207EEC821EC7C7A00D02DC3 /* NTDownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTDownloadViewController.h; sourceTree = "<group>"; };
+		B207EEC921EC7C7A00D02DC3 /* NTDownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTDownloadViewController.m; sourceTree = "<group>"; };
+		B207EECA21EC7C7A00D02DC3 /* NTDownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTDownloadViewController.xib; sourceTree = "<group>"; };
+		B2383B1421EC7D89005794C2 /* NTLocalVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTLocalVideoTableViewCell.h; sourceTree = "<group>"; };
+		B2383B1521EC7D89005794C2 /* NTLocalVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTLocalVideoTableViewCell.m; sourceTree = "<group>"; };
+		B2383B1621EC7D89005794C2 /* NTLocalVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTLocalVideoTableViewCell.xib; sourceTree = "<group>"; };
+		B2383B1921EC7DA3005794C2 /* NTDownloadTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTDownloadTableViewCell.h; sourceTree = "<group>"; };
+		B2383B1A21EC7DA3005794C2 /* NTDownloadTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTDownloadTableViewCell.m; sourceTree = "<group>"; };
+		B2383B1B21EC7DA3005794C2 /* NTDownloadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTDownloadTableViewCell.xib; sourceTree = "<group>"; };
+		B2383B1F21EC821F005794C2 /* NTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTWebViewController.h; sourceTree = "<group>"; };
+		B2383B2021EC821F005794C2 /* NTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTWebViewController.m; sourceTree = "<group>"; };
+		B2383B2221EC87F4005794C2 /* NTVideoParseManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTVideoParseManage.h; sourceTree = "<group>"; };
+		B2383B2321EC87F4005794C2 /* NTVideoParseManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTVideoParseManage.m; sourceTree = "<group>"; };
 		B2A8BAC220EF3BAC008789F2 /* NTVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A8BAC520EF3BAC008789F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +102,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B207EEBC21EC7A5600D02DC3 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				B207EEBE21EC7AA000D02DC3 /* Controller */,
+				B207EEBD21EC7AA000D02DC3 /* Model */,
+				B207EEBF21EC7AA000D02DC3 /* View */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		B207EEBD21EC7AA000D02DC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B207EEBE21EC7AA000D02DC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B207EEC321EC7B5C00D02DC3 /* NTLocalVideoViewController.h */,
+				B207EEC421EC7B5C00D02DC3 /* NTLocalVideoViewController.m */,
+				B207EEC521EC7B5C00D02DC3 /* NTLocalVideoViewController.xib */,
+				B207EEC821EC7C7A00D02DC3 /* NTDownloadViewController.h */,
+				B207EEC921EC7C7A00D02DC3 /* NTDownloadViewController.m */,
+				B207EECA21EC7C7A00D02DC3 /* NTDownloadViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B207EEBF21EC7AA000D02DC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2383B1421EC7D89005794C2 /* NTLocalVideoTableViewCell.h */,
+				B2383B1521EC7D89005794C2 /* NTLocalVideoTableViewCell.m */,
+				B2383B1621EC7D89005794C2 /* NTLocalVideoTableViewCell.xib */,
+				B2383B1921EC7DA3005794C2 /* NTDownloadTableViewCell.h */,
+				B2383B1A21EC7DA3005794C2 /* NTDownloadTableViewCell.m */,
+				B2383B1B21EC7DA3005794C2 /* NTDownloadTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B207EEC021EC7AAC00D02DC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B207EEC121EC7AAC00D02DC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B207EEC221EC7AAC00D02DC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B2383B1E21EC81BA005794C2 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				B2383B1F21EC821F005794C2 /* NTWebViewController.h */,
+				B2383B2021EC821F005794C2 /* NTWebViewController.m */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		B2A8BAB920EF3BAC008789F2 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +196,14 @@
 		B2A8BAC420EF3BAC008789F2 /* NTVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				B2A8BB0020EF684E008789F2 /* View */,
+				B2A8BADB20EF5859008789F2 /* Home */,
+				B2A8BAE520EF5923008789F2 /* Video */,
+				B207EEBC21EC7A5600D02DC3 /* Download */,
+				B2383B1E21EC81BA005794C2 /* Web */,
 				B2A8BAEF20EF5EA1008789F2 /* Request */,
 				B2A8BAED20EF5E7C008789F2 /* Category */,
+				B2A8BB0020EF684E008789F2 /* View */,
 				B2A8BAEB20EF5E46008789F2 /* Main */,
-				B2A8BAE520EF5923008789F2 /* Video */,
-				B2A8BADB20EF5859008789F2 /* Home */,
 				B2A8BAC520EF3BAC008789F2 /* AppDelegate.h */,
 				B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */,
 				B2A8BAFF20EF614E008789F2 /* PrefixHeader.pch */,
@@ -138,6 +239,9 @@
 		B2A8BAE520EF5923008789F2 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				B207EEC221EC7AAC00D02DC3 /* Controller */,
+				B207EEC021EC7AAC00D02DC3 /* Model */,
+				B207EEC121EC7AAC00D02DC3 /* View */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -145,6 +249,8 @@
 		B2A8BAEB20EF5E46008789F2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B2383B2221EC87F4005794C2 /* NTVideoParseManage.h */,
+				B2383B2321EC87F4005794C2 /* NTVideoParseManage.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -272,9 +378,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B207EEC721EC7B5D00D02DC3 /* NTLocalVideoViewController.xib in Resources */,
+				B207EECC21EC7C7A00D02DC3 /* NTDownloadViewController.xib in Resources */,
 				B2A8BAD220EF3BAD008789F2 /* LaunchScreen.storyboard in Resources */,
 				B2A8BAE420EF58A6008789F2 /* NTHomeViewController.xib in Resources */,
 				B2A8BAEA20EF5C0B008789F2 /* NTHomeListTableViewCell.xib in Resources */,
+				B2383B1821EC7D89005794C2 /* NTLocalVideoTableViewCell.xib in Resources */,
+				B2383B1D21EC7DA3005794C2 /* NTDownloadTableViewCell.xib in Resources */,
 				B2A8BB0920EF6CCD008789F2 /* NTWarnView.xib in Resources */,
 				B2A8BACF20EF3BAD008789F2 /* Assets.xcassets in Resources */,
 			);
@@ -346,16 +456,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2A8BB0320EF687E008789F2 /* NTEmptyPlaceHolderView.m in Sources */,
+				B2383B1C21EC7DA3005794C2 /* NTDownloadTableViewCell.m in Sources */,
 				B2A8BAD520EF3BAD008789F2 /* main.m in Sources */,
+				B2383B1721EC7D89005794C2 /* NTLocalVideoTableViewCell.m in Sources */,
 				B2A8BAE320EF58A6008789F2 /* NTHomeViewController.m in Sources */,
 				B2A8BAFB20EF6026008789F2 /* UIFont+NTNormalFont.m in Sources */,
+				B2383B2421EC87F4005794C2 /* NTVideoParseManage.m in Sources */,
 				B2A8BAF520EF5F6F008789F2 /* UIViewController+NTNavigation.m in Sources */,
 				B2A8BAE920EF5C0B008789F2 /* NTHomeListTableViewCell.m in Sources */,
+				B2383B2121EC821F005794C2 /* NTWebViewController.m in Sources */,
+				B207EEC621EC7B5D00D02DC3 /* NTLocalVideoViewController.m in Sources */,
 				B2A8BB0E20EF6CF3008789F2 /* NTWarnViewManager.m in Sources */,
 				B2A8BAFE20EF60C4008789F2 /* NSString+NTSize.m in Sources */,
 				B2A8BAF820EF5FEA008789F2 /* UIFont+NTRuntime.m in Sources */,
 				B2A8BAF220EF5ED5008789F2 /* NTRequestManager.m in Sources */,
 				B2A8BB0720EF6CBB008789F2 /* NTInputWarnView.m in Sources */,
+				B207EECB21EC7C7A00D02DC3 /* NTDownloadViewController.m in Sources */,
 				B2A8BAC720EF3BAC008789F2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

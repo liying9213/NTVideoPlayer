@@ -10,6 +10,18 @@
 
 @interface NTWarnViewManager : NSObject
 
++(void)showErrorViewWith:(NSString *)error;
+
++(void)showWarnViewNoImageWith:(NSString *)content;
+
++(void)showSuccessViewWith:(NSString *)success;
+
++(void)showStatusViewWith:(NSString *)Status;
+
++(void)showWaitingView;
+
++(void)hiddenWaitingView;
+
 + (void)shoWWarnWithCancle:(NSString *)cancle withSure:(NSString *)sure withCancleAction:(void (^)(void))cancleAction  withSureAction:(void (^)(NSString *content))sureAction;
 
 @end

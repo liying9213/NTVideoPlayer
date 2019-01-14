@@ -21,5 +21,8 @@
 
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define IS_IPHONE_X (@available(iOS 11.0, *) ? [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom > 0.0 : NO )
+#define NaviBarHeight (IS_IPHONE_X ? 88.0f : 64.0f)
+#define TabBarHeight (IS_IPHONE_X ? 83.0f : 49.0f)
 
 #endif

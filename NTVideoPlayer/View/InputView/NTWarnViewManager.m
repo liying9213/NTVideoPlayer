@@ -7,9 +7,57 @@
 //
 
 #import "NTWarnViewManager.h"
+#import <SVProgressHUD.h>
 #import "NTInputWarnView.h"
 
 @implementation NTWarnViewManager
+
++ (void)showErrorViewWith:(NSString *)error{
+    [SVProgressHUD dismiss];
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setMinimumDismissTimeInterval:1];
+    [SVProgressHUD setCornerRadius:8.0f];
+    [SVProgressHUD showErrorWithStatus:error];
+}
+
++(void)showSuccessViewWith:(NSString *)success{
+    [SVProgressHUD dismiss];
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setMinimumDismissTimeInterval:1];
+    [SVProgressHUD setCornerRadius:8.0f];
+    [SVProgressHUD showSuccessWithStatus:success];
+}
+
++(void)showWarnViewNoImageWith:(NSString *)content{
+    [SVProgressHUD dismiss];
+    [SVProgressHUD setSuccessImage:nil];
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setMinimumDismissTimeInterval:1];
+    [SVProgressHUD setCornerRadius:8.0f];
+    [SVProgressHUD showSuccessWithStatus:content];
+}
+
++(void)showStatusViewWith:(NSString *)Status{
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setMinimumDismissTimeInterval:2.0];
+    [SVProgressHUD setCornerRadius:8.0f];
+    [SVProgressHUD showWithStatus:Status];
+}
+
++(void)showWaitingView{
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setCornerRadius:8.0f];
+    [SVProgressHUD show];
+}
+
++(void)hiddenWaitingView{
+    [SVProgressHUD dismiss];
+}
 
 + (void)shoWWarnWithCancle:(NSString *)cancle withSure:(NSString *)sure withCancleAction:(void (^)(void))cancleAction  withSureAction:(void (^)(NSString *content))sureAction{
     __block NTInputWarnView *view = [[NSBundle mainBundle] loadNibNamed:@"NTWarnView" owner:nil options:nil][0];
