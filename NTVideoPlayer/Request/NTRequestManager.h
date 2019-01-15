@@ -37,6 +37,15 @@ typedef void(^ResponseBlock)(NSError *error, NSDictionary *response);
 + (void)getSessionWithURL:(NSString *)url params:(NSDictionary *)params block:(ResponseBlock)block;
 
 /**
+ get html请求
+ 
+ @param url html地址
+ @param params 参数
+ @param block 回调
+ */
++ (void)getSessionWithHtmlURL:(NSString *)url params:(NSDictionary *)params block:(ResponseBlock)block;
+
+/**
  post请求
  
  @param url 地址

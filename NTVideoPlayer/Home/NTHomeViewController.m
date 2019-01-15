@@ -7,15 +7,19 @@
 //
 
 #import "NTHomeViewController.h"
-#import "NTHomeListTableViewCell.h"
+#import "NTHomeCollectionViewCell.h"
 #import <UITableView+FDTemplateLayoutCell.h>
 #import <UITableView+CYLTableViewPlaceHolder.h>
+#import "UIViewController+NTNavigation.h"
+#import "NTLocalVideoViewController.h"
 #import "NTEmptyPlaceHolderView.h"
+#import "NTWebViewController.h"
 #import "NTWarnViewManager.h"
+#import "NTLocalDataManage.h"
 #import <extobjc.h>
 
-@interface NTHomeViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface NTHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>
+@property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray *listArray;
 
 @end
@@ -26,6 +30,7 @@
     [super viewDidLoad];
     [self resetNavView];
     [self resetView];
+    [self getData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,108 +38,86 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)getData{
+    self.listArray = [NTLocalDataManage getHomeData];
+    [self.collectionView reloadData];
+}
+
 #pragma mark - resetView
 - (void)resetNavView{
-    
+    [self setNavRightItemTitle:nil ImageName:@"download" WithAction:@"downloadAction"];
 }
 
 - (void)resetView{
-    [self.tableView registerNib:[UINib nibWithNibName:@"NTHomeListTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"NTHomeListTableViewCell"];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView cyl_reloadData];
-            
-        });
-    });
+    [self.collectionView registerNib:[UINib nibWithNibName:@"NTHomeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"NTHomeCollectionViewCell"];
 }
 
-#pragma mark - getData
-
-- (void)getData{
-    
+- (UICollectionView *)collectionView{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        layout.headerReferenceSize = CGSizeMake(ScreenWidth, 57);
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        [self.view addSubview:_collectionView];
+    }
+    return _collectionView;
 }
 
-#pragma mark - tableViewDeleGate
+#pragma mark CollectionView Delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.listArray.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return  1;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat height = [tableView
-                      fd_heightForCellWithIdentifier:@"NTHomeListTableViewCell"
-                      cacheByIndexPath:indexPath
-                      configuration:^(id cell) {
-                          [(NTHomeListTableViewCell *)cell reloadCellWithData:self.listArray[indexPath.section]];
-                      }];
-    return height;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
-        return 15.0f;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NTHomeCollectionViewCell * cell  = [collectionView dequeueReusableCellWithReuseIdentifier:@"NTHomeCollectionViewCell" forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[NSBundle mainBundle] loadNibNamed:@"NTHomeCollectionViewCell" owner:nil options:nil][0];
     }
-    return 5.0f;
+    [cell reloadCellWithData:self.listArray[indexPath.row]];
+    
+    return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 5.0f;
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self webViewWith:self.listArray[indexPath.row][@"url"] withTitle:self.listArray[indexPath.row][@"title"]];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    return  [UIView new];
+#pragma mark FlowLayoutDelegate
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake((ScreenWidth - 60)/2, (ScreenWidth - 60)/4);
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return  [UIView new];
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, 20, 10, 20);
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString * cellStr = @"NTHomeListTableViewCell";
-    NTHomeListTableViewCell * _cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-    if (_cell == nil) {
-        _cell = [[[NSBundle mainBundle] loadNibNamed:cellStr owner:self options:nil] lastObject];
-        _cell.backgroundColor = [UIColor clearColor];
-    }
-    [_cell reloadCellWithData:self.listArray[indexPath.section]];
-    return _cell;
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    return 20;
+}
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    return 20;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void)webViewWith:(NSString *)path withTitle:(NSString *)title{
+    NTWebViewController *viewController = [[NTWebViewController alloc] init];
+    viewController.urlPath = path;
+    viewController.navTitle = title;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
-#pragma mark - userAction
-- (void)showInputView{
-    [NTWarnViewManager shoWWarnWithCancle:@"取消" withSure:@"确定" withCancleAction:^{
-        
-    } withSureAction:^(NSString *content) {
-        
-    }];
-}
-
-#pragma mark CYLTableViewPlaceHolderDelegate
-- (UIView *)makePlaceHolderView{
-    __block UIView * emptyView ;
-    @weakify(self)
-    emptyView = [[NTEmptyPlaceHolderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0) withTitle:nil withContent:@"暂无数据" withImage:@"empty" withHeaderTopValue:0 withlineNum:1 withNeedReload:YES withReloadText:@"添加" reloadBlock:^{
-        @strongify(self)
-        [self showInputView];
-    }];
-    return emptyView;
-}
-
-- (BOOL)enableScrollWhenPlaceHolderViewShowing{
-    return YES;
-}
-
-- (BOOL)removePlaceHolderView{
-    return YES;
+- (void)downloadAction{
+    NTLocalVideoViewController *viewController = [[NTLocalVideoViewController alloc] init];
+    viewController.navTitle = @"已下载";
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

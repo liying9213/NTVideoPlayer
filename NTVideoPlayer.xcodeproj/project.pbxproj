@@ -18,14 +18,16 @@
 		B2383B1D21EC7DA3005794C2 /* NTDownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2383B1B21EC7DA3005794C2 /* NTDownloadTableViewCell.xib */; };
 		B2383B2121EC821F005794C2 /* NTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2383B2021EC821F005794C2 /* NTWebViewController.m */; };
 		B2383B2421EC87F4005794C2 /* NTVideoParseManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B2383B2321EC87F4005794C2 /* NTVideoParseManage.m */; };
+		B29EE2BE21EDD62900D29DB9 /* NTHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B29EE2BC21EDD62900D29DB9 /* NTHomeCollectionViewCell.m */; };
+		B29EE2BF21EDD62900D29DB9 /* NTHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29EE2BD21EDD62900D29DB9 /* NTHomeCollectionViewCell.xib */; };
+		B29EE2C121EDD89E00D29DB9 /* NTHomeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B29EE2C021EDD89E00D29DB9 /* NTHomeData.plist */; };
+		B29EE2C421EDD9DC00D29DB9 /* NTLocalDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B29EE2C321EDD9DC00D29DB9 /* NTLocalDataManage.m */; };
 		B2A8BAC720EF3BAC008789F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */; };
 		B2A8BACF20EF3BAD008789F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BACE20EF3BAD008789F2 /* Assets.xcassets */; };
 		B2A8BAD220EF3BAD008789F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAD020EF3BAD008789F2 /* LaunchScreen.storyboard */; };
 		B2A8BAD520EF3BAD008789F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAD420EF3BAD008789F2 /* main.m */; };
 		B2A8BAE320EF58A6008789F2 /* NTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAE120EF58A6008789F2 /* NTHomeViewController.m */; };
 		B2A8BAE420EF58A6008789F2 /* NTHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAE220EF58A6008789F2 /* NTHomeViewController.xib */; };
-		B2A8BAE920EF5C0B008789F2 /* NTHomeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAE720EF5C0B008789F2 /* NTHomeListTableViewCell.m */; };
-		B2A8BAEA20EF5C0B008789F2 /* NTHomeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAE820EF5C0B008789F2 /* NTHomeListTableViewCell.xib */; };
 		B2A8BAF220EF5ED5008789F2 /* NTRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAF120EF5ED5008789F2 /* NTRequestManager.m */; };
 		B2A8BAF520EF5F6F008789F2 /* UIViewController+NTNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAF420EF5F6F008789F2 /* UIViewController+NTNavigation.m */; };
 		B2A8BAF820EF5FEA008789F2 /* UIFont+NTRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAF720EF5FEA008789F2 /* UIFont+NTRuntime.m */; };
@@ -56,6 +58,12 @@
 		B2383B2021EC821F005794C2 /* NTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTWebViewController.m; sourceTree = "<group>"; };
 		B2383B2221EC87F4005794C2 /* NTVideoParseManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTVideoParseManage.h; sourceTree = "<group>"; };
 		B2383B2321EC87F4005794C2 /* NTVideoParseManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTVideoParseManage.m; sourceTree = "<group>"; };
+		B29EE2BB21EDD62900D29DB9 /* NTHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTHomeCollectionViewCell.h; sourceTree = "<group>"; };
+		B29EE2BC21EDD62900D29DB9 /* NTHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTHomeCollectionViewCell.m; sourceTree = "<group>"; };
+		B29EE2BD21EDD62900D29DB9 /* NTHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		B29EE2C021EDD89E00D29DB9 /* NTHomeData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NTHomeData.plist; sourceTree = "<group>"; };
+		B29EE2C221EDD9DC00D29DB9 /* NTLocalDataManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTLocalDataManage.h; sourceTree = "<group>"; };
+		B29EE2C321EDD9DC00D29DB9 /* NTLocalDataManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTLocalDataManage.m; sourceTree = "<group>"; };
 		B2A8BAC220EF3BAC008789F2 /* NTVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A8BAC520EF3BAC008789F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,9 +74,6 @@
 		B2A8BAE020EF58A6008789F2 /* NTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTHomeViewController.h; sourceTree = "<group>"; };
 		B2A8BAE120EF58A6008789F2 /* NTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTHomeViewController.m; sourceTree = "<group>"; };
 		B2A8BAE220EF58A6008789F2 /* NTHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTHomeViewController.xib; sourceTree = "<group>"; };
-		B2A8BAE620EF5C0B008789F2 /* NTHomeListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTHomeListTableViewCell.h; sourceTree = "<group>"; };
-		B2A8BAE720EF5C0B008789F2 /* NTHomeListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTHomeListTableViewCell.m; sourceTree = "<group>"; };
-		B2A8BAE820EF5C0B008789F2 /* NTHomeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NTHomeListTableViewCell.xib; sourceTree = "<group>"; };
 		B2A8BAF020EF5ED5008789F2 /* NTRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRequestManager.h; sourceTree = "<group>"; };
 		B2A8BAF120EF5ED5008789F2 /* NTRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRequestManager.m; sourceTree = "<group>"; };
 		B2A8BAF320EF5F6F008789F2 /* UIViewController+NTNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NTNavigation.h"; sourceTree = "<group>"; };
@@ -211,6 +216,7 @@
 				B2A8BAD020EF3BAD008789F2 /* LaunchScreen.storyboard */,
 				B2A8BAD320EF3BAD008789F2 /* Info.plist */,
 				B2A8BAD420EF3BAD008789F2 /* main.m */,
+				B29EE2C021EDD89E00D29DB9 /* NTHomeData.plist */,
 			);
 			path = NTVideoPlayer;
 			sourceTree = "<group>";
@@ -229,9 +235,9 @@
 		B2A8BADC20EF5871008789F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B2A8BAE620EF5C0B008789F2 /* NTHomeListTableViewCell.h */,
-				B2A8BAE720EF5C0B008789F2 /* NTHomeListTableViewCell.m */,
-				B2A8BAE820EF5C0B008789F2 /* NTHomeListTableViewCell.xib */,
+				B29EE2BB21EDD62900D29DB9 /* NTHomeCollectionViewCell.h */,
+				B29EE2BC21EDD62900D29DB9 /* NTHomeCollectionViewCell.m */,
+				B29EE2BD21EDD62900D29DB9 /* NTHomeCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 			children = (
 				B2383B2221EC87F4005794C2 /* NTVideoParseManage.h */,
 				B2383B2321EC87F4005794C2 /* NTVideoParseManage.m */,
+				B29EE2C221EDD9DC00D29DB9 /* NTLocalDataManage.h */,
+				B29EE2C321EDD9DC00D29DB9 /* NTLocalDataManage.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -382,11 +390,12 @@
 				B207EECC21EC7C7A00D02DC3 /* NTDownloadViewController.xib in Resources */,
 				B2A8BAD220EF3BAD008789F2 /* LaunchScreen.storyboard in Resources */,
 				B2A8BAE420EF58A6008789F2 /* NTHomeViewController.xib in Resources */,
-				B2A8BAEA20EF5C0B008789F2 /* NTHomeListTableViewCell.xib in Resources */,
 				B2383B1821EC7D89005794C2 /* NTLocalVideoTableViewCell.xib in Resources */,
 				B2383B1D21EC7DA3005794C2 /* NTDownloadTableViewCell.xib in Resources */,
 				B2A8BB0920EF6CCD008789F2 /* NTWarnView.xib in Resources */,
+				B29EE2BF21EDD62900D29DB9 /* NTHomeCollectionViewCell.xib in Resources */,
 				B2A8BACF20EF3BAD008789F2 /* Assets.xcassets in Resources */,
+				B29EE2C121EDD89E00D29DB9 /* NTHomeData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,12 +467,13 @@
 				B2A8BB0320EF687E008789F2 /* NTEmptyPlaceHolderView.m in Sources */,
 				B2383B1C21EC7DA3005794C2 /* NTDownloadTableViewCell.m in Sources */,
 				B2A8BAD520EF3BAD008789F2 /* main.m in Sources */,
+				B29EE2C421EDD9DC00D29DB9 /* NTLocalDataManage.m in Sources */,
+				B29EE2BE21EDD62900D29DB9 /* NTHomeCollectionViewCell.m in Sources */,
 				B2383B1721EC7D89005794C2 /* NTLocalVideoTableViewCell.m in Sources */,
 				B2A8BAE320EF58A6008789F2 /* NTHomeViewController.m in Sources */,
 				B2A8BAFB20EF6026008789F2 /* UIFont+NTNormalFont.m in Sources */,
 				B2383B2421EC87F4005794C2 /* NTVideoParseManage.m in Sources */,
 				B2A8BAF520EF5F6F008789F2 /* UIViewController+NTNavigation.m in Sources */,
-				B2A8BAE920EF5C0B008789F2 /* NTHomeListTableViewCell.m in Sources */,
 				B2383B2121EC821F005794C2 /* NTWebViewController.m in Sources */,
 				B207EEC621EC7B5D00D02DC3 /* NTLocalVideoViewController.m in Sources */,
 				B2A8BB0E20EF6CF3008789F2 /* NTWarnViewManager.m in Sources */,

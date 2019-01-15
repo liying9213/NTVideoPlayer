@@ -33,11 +33,12 @@
 
 - (void)resetNavView{
     [self setNavLeftItemTitle:nil ImageName:@"backIon" WithAction:@"backAction"];
-    [self setNavRightItemTitle:@"" ImageName:nil WithAction:@"videoAction"];
+    [self setNavRightItemTitle:nil ImageName:@"add_skills" WithAction:@"videoAction"];
 }
 
 
 - (void)loadWebView{
+    [NTWarnViewManager showWaitingView];
     [self.webview stopLoading];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[self.urlPath stringByReplacingOccurrencesOfString:@" " withString:@""]]
                                                   cachePolicy:NSURLRequestUseProtocolCachePolicy
@@ -80,7 +81,7 @@
 }
 
 - (void)videoAction{
-    [[NTVideoParseManage shareManager] videoParseWithPath:@"" withResult:^(NSDictionary * _Nonnull parseResult) {
+    [[NTVideoParseManage shareManager] videoParseWithPath:self.webview.URL.absoluteString withResult:^(NSDictionary * _Nonnull parseResult) {
         
     }];
 }

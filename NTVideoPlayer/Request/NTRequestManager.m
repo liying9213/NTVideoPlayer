@@ -29,6 +29,34 @@
 }
 
 /**
+ get html请求
+ 
+ @param url html地址
+ @param params 参数
+ @param block 回调
+ */
++ (void)getSessionWithHtmlURL:(NSString *)url params:(NSDictionary *)params block:(ResponseBlock)block{
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    session.responseSerializer = [AFHTTPResponseSerializer serializer];
+    session.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+    session.requestSerializer.timeoutInterval = 10.0f;
+    [session GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject isKindOfClass:NSData.class]) {
+            NSString *result =[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+            block(nil, @{@"code":@"1",@"html":result});
+        }
+        else if ([responseObject isKindOfClass:NSString.class]) {
+            block(nil, @{@"code":@"1",@"html":responseObject});
+        }
+        else{
+            block(nil, responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        block(error,@{@"msg":@"网络连接失败！",@"code":@"-9999"});
+    }];
+}
+
+/**
  post请求
  
  @param url 地址

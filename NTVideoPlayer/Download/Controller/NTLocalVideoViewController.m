@@ -11,6 +11,7 @@
 #import <UITableView+FDTemplateLayoutCell.h>
 #import <UITableView+CYLTableViewPlaceHolder.h>
 #import "UIViewController+NTNavigation.h"
+#import "NTDownloadViewController.h"
 #import "NTEmptyPlaceHolderView.h"
 #import "NTWarnViewManager.h"
 #import <extobjc.h>
@@ -37,6 +38,7 @@
 #pragma mark - resetView
 - (void)resetNavView{
     [self setNavLeftItemTitle:nil ImageName:@"backIon" WithAction:@"backAction"];
+    [self setNavRightItemTitle:nil ImageName:@"download" WithAction:@"downloadAction"];
 }
 
 - (void)resetView{
@@ -141,4 +143,8 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)downloadAction{
+    NTDownloadViewController *viewController = [[NTDownloadViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 @end

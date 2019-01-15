@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>home</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>爱奇艺</string>
+			<key>color</key>
+			<string>618CFF</string>
+			<key>url</key>
+			<string>http://www.iqiyi.com</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>腾讯视频</string>
+			<key>color</key>
+			<string>618CFF</string>
+			<key>url</key>
+			<string>http://m.v.qq.com</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>优酷</string>
+			<key>color</key>
+			<string>15bb3a</string>
+			<key>url</key>
+			<string>https://www.youku.com</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>乐视</string>
+			<key>color</key>
+			<string>ff9328</string>
+			<key>url</key>
+			<string>https://m.le.com</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>搜狐</string>
+			<key>color</key>
+			<string>ff7400</string>
+			<key>url</key>
+			<string>https://m.tv.sohu.com</string>
+		</dict>
+	</array>
+</dict>
+</plist>
