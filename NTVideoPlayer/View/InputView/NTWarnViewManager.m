@@ -9,6 +9,7 @@
 #import "NTWarnViewManager.h"
 #import <SVProgressHUD.h>
 #import "NTInputWarnView.h"
+#import "NTVideoParseView.h"
 
 @implementation NTWarnViewManager
 
@@ -86,6 +87,63 @@
                              }
                          }];
     }];
+    UIWindow *window = [UIApplication sharedApplication].windows[0];
+    [window addSubview:view];
+    view.frame = window.bounds;
+    view.alpha = 0;
+    [UIView animateWithDuration:0.15
+                     animations:^{
+                         view.alpha = 1.0;
+                     }
+                     completion:^(BOOL finished){
+                     }];
+}
+
++ (void)shoWParseWarnWithPath:(NSString *)path withCancleAction:(void (^)(void))cancleAction withPlayAction:(void (^)(NSString *content))playAction withDownLoadAction:(void (^)(NSString *content))downLoadAction{
+    __block NTVideoParseView *view = [[NSBundle mainBundle] loadNibNamed:@"NTWarnView" owner:nil options:nil][1];
+    view.urlPath = path;
+    [view parseWebView];
+    view.cancleAction = ^{
+        !cancleAction ? : cancleAction();
+        [UIView animateWithDuration:0.15
+                         animations:^{
+                             view.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished) {
+                             if (finished) {
+                                 [view removeFromSuperview];
+                                 view = nil;
+                             }
+                         }];
+    };
+    view.playAction = ^(NSString * _Nonnull content) {
+        !playAction ? : playAction(content);
+        [UIView animateWithDuration:0.15
+                         animations:^{
+                             view.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished) {
+                             if (finished) {
+                                 [view removeFromSuperview];
+                                 view = nil;
+                             }
+                         }];
+        
+    };
+    view.downLoadAction = ^(NSString * _Nonnull content) {
+        !downLoadAction ? : downLoadAction(content);
+        [UIView animateWithDuration:0.15
+                         animations:^{
+                             view.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished) {
+                             if (finished) {
+                                 [view removeFromSuperview];
+                                 view = nil;
+                             }
+                         }];
+        
+    };
     UIWindow *window = [UIApplication sharedApplication].windows[0];
     [window addSubview:view];
     view.frame = window.bounds;

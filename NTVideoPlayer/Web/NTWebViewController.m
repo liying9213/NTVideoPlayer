@@ -70,6 +70,15 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
     [NTWarnViewManager hiddenWaitingView];
+    NSString *JsStr = @"(document.getElementsByTagName(\"video\")[0]).src";
+    [webView evaluateJavaScript:JsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+        if(![response isEqual:[NSNull null]] && response != nil){
+            //截获到视频地址了
+            NSLog(@"response == %@",response);
+        }else{
+            //没有视频链接
+        }
+    }];
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
@@ -81,8 +90,12 @@
 }
 
 - (void)videoAction{
-    [[NTVideoParseManage shareManager] videoParseWithPath:self.webview.URL.absoluteString withResult:^(NSDictionary * _Nonnull parseResult) {
+    [NTWarnViewManager shoWParseWarnWithPath:self.webview.URL.absoluteString withCancleAction:^{
         
+    } withPlayAction:^(NSString *content) {
+        NSLog(@"=play====%@",content);
+    } withDownLoadAction:^(NSString *content) {
+        NSLog(@"=down====%@",content);
     }];
 }
 

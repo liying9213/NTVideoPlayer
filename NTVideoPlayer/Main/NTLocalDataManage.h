@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSArray *)getHomeData;
 
++ (NSArray *)getParseData;
+
 @end
 
 NS_ASSUME_NONNULL_END

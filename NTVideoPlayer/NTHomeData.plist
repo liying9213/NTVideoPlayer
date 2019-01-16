@@ -45,5 +45,20 @@
 			<string>https://m.tv.sohu.com</string>
 		</dict>
 	</array>
+	<key>parsePath</key>
+	<array>
+		<string>http://jx.anlehe.com/?url=</string>
+		<string>http://www.1717yun.com/jx/ty.php?url=</string>
+		<string>https://cn.bjbanshan.cn/jiexi.php?url=</string>
+		<string>http://api.nepian.com/ckparse/?url=</string>
+		<string>http://jx.aeidu.cn/index.php?url=</string>
+		<string>http://aikan-tv.com/?url=</string>
+		<string>http://vip.jlsprh.com/index.php?url=</string>
+		<string>http://api.91exp.com/svip/?url=</string>
+		<string>http://2gty.com/apiurl/yun.php?url=</string>
+		<string>http://jqaaa.com/jx.php?url=</string>
+		<string>http://jx.598110.com/index.php?url=</string>
+		<string>http://api.bbbbbb.me/jx/?url=</string>
+	</array>
 </dict>
 </plist>

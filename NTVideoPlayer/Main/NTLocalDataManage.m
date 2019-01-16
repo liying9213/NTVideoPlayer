@@ -15,6 +15,11 @@
     return homeData[@"home"];
 }
 
++ (NSArray *)getParseData{
+    NSDictionary * homeData = [self getLocalDataWithName:@"NTHomeData"];
+    return homeData[@"parsePath"];
+}
+
 + (NSDictionary *)getLocalDataWithName:(NSString *)name{
     NSString *filePath = [[NSBundle mainBundle] pathForResource:name ofType:@"plist"];
     NSDictionary *homeData = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];

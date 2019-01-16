@@ -22,6 +22,7 @@
 		B29EE2BF21EDD62900D29DB9 /* NTHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29EE2BD21EDD62900D29DB9 /* NTHomeCollectionViewCell.xib */; };
 		B29EE2C121EDD89E00D29DB9 /* NTHomeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B29EE2C021EDD89E00D29DB9 /* NTHomeData.plist */; };
 		B29EE2C421EDD9DC00D29DB9 /* NTLocalDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B29EE2C321EDD9DC00D29DB9 /* NTLocalDataManage.m */; };
+		B29EE2C721EF340300D29DB9 /* NTVideoParseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29EE2C621EF340300D29DB9 /* NTVideoParseView.m */; };
 		B2A8BAC720EF3BAC008789F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */; };
 		B2A8BACF20EF3BAD008789F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BACE20EF3BAD008789F2 /* Assets.xcassets */; };
 		B2A8BAD220EF3BAD008789F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAD020EF3BAD008789F2 /* LaunchScreen.storyboard */; };
@@ -64,6 +65,8 @@
 		B29EE2C021EDD89E00D29DB9 /* NTHomeData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NTHomeData.plist; sourceTree = "<group>"; };
 		B29EE2C221EDD9DC00D29DB9 /* NTLocalDataManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTLocalDataManage.h; sourceTree = "<group>"; };
 		B29EE2C321EDD9DC00D29DB9 /* NTLocalDataManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTLocalDataManage.m; sourceTree = "<group>"; };
+		B29EE2C521EF340300D29DB9 /* NTVideoParseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTVideoParseView.h; sourceTree = "<group>"; };
+		B29EE2C621EF340300D29DB9 /* NTVideoParseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTVideoParseView.m; sourceTree = "<group>"; };
 		B2A8BAC220EF3BAC008789F2 /* NTVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A8BAC520EF3BAC008789F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				B2A8BB0D20EF6CF3008789F2 /* NTWarnViewManager.m */,
 				B2A8BB0520EF6CBB008789F2 /* NTInputWarnView.h */,
 				B2A8BB0620EF6CBB008789F2 /* NTInputWarnView.m */,
+				B29EE2C521EF340300D29DB9 /* NTVideoParseView.h */,
+				B29EE2C621EF340300D29DB9 /* NTVideoParseView.m */,
 				B2A8BB0820EF6CCD008789F2 /* NTWarnView.xib */,
 			);
 			path = InputView;
@@ -476,6 +481,7 @@
 				B2A8BAF520EF5F6F008789F2 /* UIViewController+NTNavigation.m in Sources */,
 				B2383B2121EC821F005794C2 /* NTWebViewController.m in Sources */,
 				B207EEC621EC7B5D00D02DC3 /* NTLocalVideoViewController.m in Sources */,
+				B29EE2C721EF340300D29DB9 /* NTVideoParseView.m in Sources */,
 				B2A8BB0E20EF6CF3008789F2 /* NTWarnViewManager.m in Sources */,
 				B2A8BAFE20EF60C4008789F2 /* NSString+NTSize.m in Sources */,
 				B2A8BAF820EF5FEA008789F2 /* UIFont+NTRuntime.m in Sources */,

@@ -18,7 +18,6 @@
 
 @implementation NTInputWarnView
 
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.textView.font = [UIFont normalFontOfSize:14 WithFontType:Normal];

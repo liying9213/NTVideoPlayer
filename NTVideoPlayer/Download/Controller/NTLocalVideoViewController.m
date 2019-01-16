@@ -114,11 +114,18 @@
 #pragma mark - userAction
 - (void)showInputView{
     [NTWarnViewManager shoWWarnWithCancle:@"取消" withSure:@"确定" withCancleAction:^{
-        
     } withSureAction:^(NSString *content) {
-        
+        [self parseAction:content];
     }];
 }
+
+- (void)parseAction:(NSString *)path{
+    [NTWarnViewManager shoWParseWarnWithPath:path withCancleAction:^{
+    } withPlayAction:^(NSString *content) {
+    } withDownLoadAction:^(NSString *content) {
+    }];
+}
+
 
 #pragma mark CYLTableViewPlaceHolderDelegate
 - (UIView *)makePlaceHolderView{

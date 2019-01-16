@@ -38,6 +38,7 @@
 #pragma mark - resetView
 - (void)resetNavView{
     [self setNavLeftItemTitle:nil ImageName:@"backIon" WithAction:@"backAction"];
+    [self setNavRightItemTitle:nil ImageName:@"download" WithAction:@"downloadAction"];
 }
 
 - (void)resetView{
@@ -108,6 +109,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - userAction
+
+- (void)download{
+    [NTWarnViewManager shoWWarnWithCancle:@"取消" withSure:@"确定" withCancleAction:^{
+    } withSureAction:^(NSString *content) {
+        [self parseAction:content];
+    }];
+}
+
+- (void)parseAction:(NSString *)path{
+    [NTWarnViewManager shoWParseWarnWithPath:path withCancleAction:^{
+    } withPlayAction:^(NSString *content) {
+    } withDownLoadAction:^(NSString *content) {
+    }];
 }
 
 #pragma mark CYLTableViewPlaceHolderDelegate

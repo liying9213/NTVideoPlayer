@@ -24,4 +24,6 @@
 
 + (void)shoWWarnWithCancle:(NSString *)cancle withSure:(NSString *)sure withCancleAction:(void (^)(void))cancleAction  withSureAction:(void (^)(NSString *content))sureAction;
 
++ (void)shoWParseWarnWithPath:(NSString *)path withCancleAction:(void (^)(void))cancleAction withPlayAction:(void (^)(NSString *content))playAction withDownLoadAction:(void (^)(NSString *content))downLoadAction;
+
 @end
