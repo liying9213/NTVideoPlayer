@@ -22,4 +22,6 @@ pod 'IQKeyboardManager'
 
 pod 'FMDB'
 
+pod 'WMPlayer'
+
 end

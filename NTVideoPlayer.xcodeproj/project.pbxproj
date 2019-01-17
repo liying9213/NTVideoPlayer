@@ -23,6 +23,7 @@
 		B29EE2C121EDD89E00D29DB9 /* NTHomeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B29EE2C021EDD89E00D29DB9 /* NTHomeData.plist */; };
 		B29EE2C421EDD9DC00D29DB9 /* NTLocalDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B29EE2C321EDD9DC00D29DB9 /* NTLocalDataManage.m */; };
 		B29EE2C721EF340300D29DB9 /* NTVideoParseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29EE2C621EF340300D29DB9 /* NTVideoParseView.m */; };
+		B29EE2CA21EF40C100D29DB9 /* NTPlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29EE2C921EF40C100D29DB9 /* NTPlayVideoViewController.m */; };
 		B2A8BAC720EF3BAC008789F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */; };
 		B2A8BACF20EF3BAD008789F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BACE20EF3BAD008789F2 /* Assets.xcassets */; };
 		B2A8BAD220EF3BAD008789F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A8BAD020EF3BAD008789F2 /* LaunchScreen.storyboard */; };
@@ -67,6 +68,8 @@
 		B29EE2C321EDD9DC00D29DB9 /* NTLocalDataManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTLocalDataManage.m; sourceTree = "<group>"; };
 		B29EE2C521EF340300D29DB9 /* NTVideoParseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTVideoParseView.h; sourceTree = "<group>"; };
 		B29EE2C621EF340300D29DB9 /* NTVideoParseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTVideoParseView.m; sourceTree = "<group>"; };
+		B29EE2C821EF40C100D29DB9 /* NTPlayVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTPlayVideoViewController.h; sourceTree = "<group>"; };
+		B29EE2C921EF40C100D29DB9 /* NTPlayVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTPlayVideoViewController.m; sourceTree = "<group>"; };
 		B2A8BAC220EF3BAC008789F2 /* NTVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A8BAC520EF3BAC008789F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2A8BAC620EF3BAC008789F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 		B207EEC221EC7AAC00D02DC3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B29EE2C821EF40C100D29DB9 /* NTPlayVideoViewController.h */,
+				B29EE2C921EF40C100D29DB9 /* NTPlayVideoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,7 +347,6 @@
 				B2A8BABE20EF3BAC008789F2 /* Sources */,
 				B2A8BABF20EF3BAC008789F2 /* Frameworks */,
 				B2A8BAC020EF3BAC008789F2 /* Resources */,
-				692B9674829F2CACA328AE64 /* [CP] Embed Pods Frameworks */,
 				D91AD1879DDD0FF5B2CA1280 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -407,21 +411,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		692B9674829F2CACA328AE64 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NTVideoPlayer/Pods-NTVideoPlayer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7B47363E648F5B6A5E90C687 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,12 +439,14 @@
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/WMPlayer/WMPlayer/WMPlayer.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WMPlayer.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -477,6 +468,7 @@
 				B2383B1721EC7D89005794C2 /* NTLocalVideoTableViewCell.m in Sources */,
 				B2A8BAE320EF58A6008789F2 /* NTHomeViewController.m in Sources */,
 				B2A8BAFB20EF6026008789F2 /* UIFont+NTNormalFont.m in Sources */,
+				B29EE2CA21EF40C100D29DB9 /* NTPlayVideoViewController.m in Sources */,
 				B2383B2421EC87F4005794C2 /* NTVideoParseManage.m in Sources */,
 				B2A8BAF520EF5F6F008789F2 /* UIViewController+NTNavigation.m in Sources */,
 				B2383B2121EC821F005794C2 /* NTWebViewController.m in Sources */,

@@ -121,6 +121,9 @@
                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mRm-LK-lK5">
+                            <rect key="frame" x="109.5" y="64.5" width="20" height="20"/>
+                        </activityIndicatorView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mox-0p-hQQ">
                             <rect key="frame" x="0.0" y="99" width="119.5" height="50"/>
                             <constraints>
@@ -174,18 +177,33 @@
                         <constraint firstAttribute="trailing" secondItem="WBL-Lc-8b8" secondAttribute="trailing" id="K0C-FO-BwX"/>
                         <constraint firstItem="Mox-0p-hQQ" firstAttribute="top" secondItem="WBL-Lc-8b8" secondAttribute="bottom" id="K76-VT-QQJ"/>
                         <constraint firstAttribute="trailing" secondItem="UBL-f5-WYV" secondAttribute="trailing" id="Mq4-5z-6yE"/>
+                        <constraint firstItem="mRm-LK-lK5" firstAttribute="centerY" secondItem="R0f-ae-6Io" secondAttribute="centerY" id="NB3-pJ-KR5"/>
                         <constraint firstAttribute="bottom" secondItem="UBL-f5-WYV" secondAttribute="bottom" id="Rmm-eZ-wNN"/>
                         <constraint firstItem="mk1-EU-YIc" firstAttribute="top" secondItem="WBL-Lc-8b8" secondAttribute="bottom" id="cPj-fX-XDR"/>
                         <constraint firstItem="WBL-Lc-8b8" firstAttribute="leading" secondItem="R0f-ae-6Io" secondAttribute="leading" id="f73-Z8-tDm"/>
                         <constraint firstItem="3Uo-l1-lUu" firstAttribute="leading" secondItem="R0f-ae-6Io" secondAttribute="leading" id="hka-by-S3M"/>
+                        <constraint firstItem="mRm-LK-lK5" firstAttribute="centerX" secondItem="R0f-ae-6Io" secondAttribute="centerX" id="hzH-Xf-HmG"/>
                         <constraint firstItem="UBL-f5-WYV" firstAttribute="leading" secondItem="Mox-0p-hQQ" secondAttribute="trailing" id="mVN-oW-oPq"/>
                         <constraint firstAttribute="trailing" secondItem="3Uo-l1-lUu" secondAttribute="trailing" id="uVq-CA-0ED"/>
                         <constraint firstAttribute="bottom" secondItem="mk1-EU-YIc" secondAttribute="bottom" id="wdK-4O-4gV"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zF-jw-Lya">
+                    <rect key="frame" x="267" y="120.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ga9-OX-4be"/>
+                        <constraint firstAttribute="width" constant="40" id="KH6-C6-fWp"/>
+                    </constraints>
+                    <state key="normal" image="shareClose"/>
+                    <connections>
+                        <action selector="closeAction:" destination="LzZ-2N-GYW" eventType="touchUpInside" id="A5t-Vr-RI8"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="1zF-jw-Lya" firstAttribute="trailing" secondItem="R0f-ae-6Io" secondAttribute="trailing" constant="20" id="J0i-O9-yli"/>
+                <constraint firstItem="1zF-jw-Lya" firstAttribute="top" secondItem="R0f-ae-6Io" secondAttribute="top" constant="-20" id="ZWt-hq-Oz1"/>
                 <constraint firstItem="R0f-ae-6Io" firstAttribute="centerX" secondItem="LzZ-2N-GYW" secondAttribute="centerX" id="d9d-HC-akH"/>
                 <constraint firstItem="R0f-ae-6Io" firstAttribute="leading" secondItem="LzZ-2N-GYW" secondAttribute="leading" constant="48" id="rhB-c7-wdG"/>
                 <constraint firstItem="R0f-ae-6Io" firstAttribute="centerY" secondItem="LzZ-2N-GYW" secondAttribute="centerY" constant="-50" id="wzT-sd-Iug"/>
@@ -193,12 +211,17 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="v45-7l-EfQ"/>
             <connections>
+                <outlet property="activityIndicatorView" destination="mRm-LK-lK5" id="e7T-86-nbR"/>
+                <outlet property="closeButton" destination="1zF-jw-Lya" id="BKD-Y4-r5o"/>
                 <outlet property="downLoadButton" destination="UBL-f5-WYV" id="dKp-PK-a2w"/>
                 <outlet property="playButton" destination="Mox-0p-hQQ" id="4Os-zq-Jzg"/>
                 <outlet property="textView" destination="3Uo-l1-lUu" id="1OK-vh-Nmi"/>
                 <outlet property="warnView" destination="R0f-ae-6Io" id="YbD-ub-Xfm"/>
             </connections>
-            <point key="canvasLocation" x="684" y="-15"/>
+            <point key="canvasLocation" x="684" y="-15.292353823088456"/>
         </view>
     </objects>
+    <resources>
+        <image name="shareClose" width="25" height="25"/>
+    </resources>
 </document>

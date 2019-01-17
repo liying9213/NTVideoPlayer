@@ -11,6 +11,7 @@
 #import <UITableView+FDTemplateLayoutCell.h>
 #import <UITableView+CYLTableViewPlaceHolder.h>
 #import "UIViewController+NTNavigation.h"
+#import "NTPlayVideoViewController.h"
 #import "NTEmptyPlaceHolderView.h"
 #import "NTWarnViewManager.h"
 #import <extobjc.h>
@@ -28,6 +29,11 @@
     [self resetNavView];
     [self resetView];
     [self getData];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -121,10 +127,21 @@
 }
 
 - (void)parseAction:(NSString *)path{
+    @weakify(self)
     [NTWarnViewManager shoWParseWarnWithPath:path withCancleAction:^{
     } withPlayAction:^(NSString *content) {
+        @strongify(self)
+        [self playVideoWithPath:content];
     } withDownLoadAction:^(NSString *content) {
     }];
+}
+
+- (void)playVideoWithPath:(NSString *)path{
+    NTPlayVideoViewController *viewConroller = [[NTPlayVideoViewController alloc] init];
+    WMPlayerModel *playerModel = [[WMPlayerModel alloc] init];
+    playerModel.videoURL = [NSURL URLWithString:path];
+    viewConroller.playerModel = playerModel;
+    [self.navigationController   pushViewController:viewConroller animated:YES];
 }
 
 #pragma mark CYLTableViewPlaceHolderDelegate

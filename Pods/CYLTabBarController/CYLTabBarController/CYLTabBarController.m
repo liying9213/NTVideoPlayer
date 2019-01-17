@@ -3,7 +3,7 @@
 //  CYLTabBarController
 //
 //  v1.16.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
-//  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
+//  Copyright © 2018 https://github.com/ChenYilong . All rights reserved.
 //
 
 #import "CYLTabBarController.h"
@@ -20,6 +20,8 @@ NSString *const CYLTabBarItemTitlePositionAdjustment = @"CYLTabBarItemTitlePosit
 NSUInteger CYLTabbarItemsCount = 0;
 NSUInteger CYLPlusButtonIndex = 0;
 CGFloat CYLTabBarItemWidth = 0.0f;
+CGFloat CYLTabBarHeight = 0.0f;
+
 NSString *const CYLTabBarItemWidthDidChangeNotification = @"CYLTabBarItemWidthDidChangeNotification";
 static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageViewDefaultOffsetContext;
 
@@ -47,6 +49,11 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
         [self.tabBar addObserver:self forKeyPath:@"tabImageViewDefaultOffset" options:NSKeyValueObservingOptionNew context:CYLTabImageViewDefaultOffsetContext];
         self.observingTabImageViewDefaultOffset = YES;
     }
+}
+
+- (void)setSelectedIndex:(NSUInteger)selectedIndex {
+    [super setSelectedIndex:selectedIndex];
+    [self updateSelectionStatusIfNeededForTabBarController:nil shouldSelectViewController:nil];
 }
 
 - (void)setViewDidLayoutSubViewsBlock:(CYLViewDidLayoutSubViewsBlock)viewDidLayoutSubviewsBlock {
@@ -79,6 +86,11 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
         frame.origin.y = self.view.frame.size.height - tabBarHeight;
         frame;
     });
+}
+
+- (void)setTabBarHeight:(CGFloat)tabBarHeight {
+    _tabBarHeight = tabBarHeight;
+    CYLTabBarHeight = tabBarHeight;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
@@ -359,8 +371,7 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
                   normalImageInfo:(id)normalImageInfo
                 selectedImageInfo:(id)selectedImageInfo
           titlePositionAdjustment:(UIOffset)titlePositionAdjustment
-                      imageInsets:(UIEdgeInsets)imageInsets
-{
+                      imageInsets:(UIEdgeInsets)imageInsets {
     viewController.tabBarItem.title = title;
     if (normalImageInfo) {
         UIImage *normalImage = [self getImageFromImageInfo:normalImageInfo];
@@ -449,14 +460,15 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
 
 - (void)updateSelectionStatusIfNeededForTabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     UIButton *plusButton = CYLExternPlusButton;
-    CYLTabBarController *tabBarViewController = [[CYLPlusChildViewController cyl_getViewControllerInsteadOfNavigationController] cyl_tabBarController];
-   NSArray *viewControllers = tabBarViewController.viewControllers;
-    BOOL isAdded = [self isPlusViewControllerAdded:viewControllers];
-    BOOL hasPlusChildViewController = isAdded;
-    BOOL isNotCurrentViewController = ![self isEqualViewController:viewController compairedViewController:CYLPlusChildViewController];
-    BOOL shouldConfigureSelectionStatus = (hasPlusChildViewController && isNotCurrentViewController);
+    if (!viewController) {
+        viewController = self.selectedViewController;
+    }
+     BOOL isCurrentViewController = [self isEqualViewController:viewController compairedViewController:CYLPlusChildViewController];
+    BOOL shouldConfigureSelectionStatus = (!isCurrentViewController);
     if (shouldConfigureSelectionStatus) {
         plusButton.selected = NO;
+    } else {
+        plusButton.selected = YES;
     }
 }
 
@@ -483,7 +495,7 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
     if ([self.delegate respondsToSelector:actin]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [self.delegate performSelector:actin withObject:self withObject:control];
+        [self.delegate performSelector:actin withObject:self withObject:control ?: self.selectedViewController.tabBarItem.cyl_tabButton];
 #pragma clang diagnostic pop
     }
 }

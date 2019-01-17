@@ -9,8 +9,10 @@
 #import "NTWebViewController.h"
 #import <WebKit/WebKit.h>
 #import "UIViewController+NTNavigation.h"
+#import "NTPlayVideoViewController.h"
 #import "NTWarnViewManager.h"
 #import "NTVideoParseManage.h"
+#import <extobjc.h>
 
 @interface NTWebViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
 @property (nonatomic, strong) WKWebView *webview;
@@ -26,6 +28,11 @@
     [self loadWebView];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -35,7 +42,6 @@
     [self setNavLeftItemTitle:nil ImageName:@"backIon" WithAction:@"backAction"];
     [self setNavRightItemTitle:nil ImageName:@"add_skills" WithAction:@"videoAction"];
 }
-
 
 - (void)loadWebView{
     [NTWarnViewManager showWaitingView];
@@ -70,15 +76,6 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
     [NTWarnViewManager hiddenWaitingView];
-    NSString *JsStr = @"(document.getElementsByTagName(\"video\")[0]).src";
-    [webView evaluateJavaScript:JsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        if(![response isEqual:[NSNull null]] && response != nil){
-            //截获到视频地址了
-            NSLog(@"response == %@",response);
-        }else{
-            //没有视频链接
-        }
-    }];
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
@@ -90,13 +87,22 @@
 }
 
 - (void)videoAction{
+    @weakify(self)
     [NTWarnViewManager shoWParseWarnWithPath:self.webview.URL.absoluteString withCancleAction:^{
-        
     } withPlayAction:^(NSString *content) {
-        NSLog(@"=play====%@",content);
+        @strongify(self)
+        [self playVideoWithPath:content];
     } withDownLoadAction:^(NSString *content) {
         NSLog(@"=down====%@",content);
     }];
+}
+
+- (void)playVideoWithPath:(NSString *)path{
+    NTPlayVideoViewController *viewConroller = [[NTPlayVideoViewController alloc] init];
+    WMPlayerModel *playerModel = [[WMPlayerModel alloc] init];
+    playerModel.videoURL = [NSURL URLWithString:path];
+    viewConroller.playerModel = playerModel;
+    [self.navigationController   pushViewController:viewConroller animated:YES];
 }
 
 @end

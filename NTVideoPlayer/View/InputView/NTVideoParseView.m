@@ -10,12 +10,14 @@
 #import <WebKit/WebKit.h>
 #import "NTLocalDataManage.h"
 #import "NTWarnViewManager.h"
-@interface NTVideoParseView()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
+@interface NTVideoParseView()<WKUIDelegate,WKNavigationDelegate>
 @property (nonatomic, strong) WKWebView *webview;
 @property (weak, nonatomic) IBOutlet UIView *warnView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIButton *downLoadButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (nonatomic, copy) NSString *videoPath;
 @property (nonatomic, assign) BOOL finishLoad;
 @property (nonatomic, copy) NSArray *parseArray;
@@ -35,13 +37,14 @@
 }
 
 - (void)parseWebView{
+    self.activityIndicatorView.hidden = NO;
+    [self.activityIndicatorView startAnimating];
     self.videoPath = nil;
     self.finishLoad = NO;
     [self.webview stopLoading];
-    [NTWarnViewManager showWaitingView];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",self.parseArray[self.parseIndex],[self.urlPath stringByReplacingOccurrencesOfString:@" " withString:@""]]]
                                                   cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                              timeoutInterval:15.0f];
+                                              timeoutInterval:10.0f];
     
     [self.webview loadRequest:request];
 }
@@ -61,6 +64,8 @@
         [self.playButton setTitle:@"取消" forState:UIControlStateNormal];
         [self.downLoadButton setTitle:@"重试" forState:UIControlStateNormal];
     }
+    self.activityIndicatorView.hidden = YES;
+    [self.activityIndicatorView stopAnimating];
 }
 
 - (IBAction)playAction:(id)sender {
@@ -68,7 +73,7 @@
         !self.playAction ? : self.playAction(self.videoPath);
     }
     else{
-        !self.cancleAction ? : self.cancleAction();
+        [self closeAction:nil];
     }
 }
 
@@ -83,6 +88,11 @@
         }
         [self parseWebView];
     }
+}
+
+- (IBAction)closeAction:(id)sender {
+    [self.webview stopLoading];
+    !self.cancleAction ? : self.cancleAction();
 }
 
 #pragma mark - webView
@@ -114,17 +124,16 @@
             //截获到视频地址了
             self.videoPath = response;
             NSLog(@"response == %@",response);
+            [self resetView];
         }else{
             //没有视频链接
         }
         [self resetView];
     }];
     self.finishLoad = YES;
-    [NTWarnViewManager hiddenWaitingView];
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
-    [NTWarnViewManager hiddenWaitingView];
     self.finishLoad = YES;
 }
 @end
